@@ -1,0 +1,348 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+.sidebar {
+    background-color: #e1e1e178;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #ff8f25;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 40px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h1, h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p, ul li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li::before {
+    content: "•";
+    color: #ff8f25;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.intro-image, .issue-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.context {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.context-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.context-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff8f25;
+}
+
+.context-item p {
+    font-size: 1em;
+    max-width: 120px;
+}
+
+.next-step, .back-step, .issue-info, #analisis .info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5a623;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.next-step p, .issue-info p, #analisis .info-box p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.next-button, .back-button {
+    background-color: #e31837;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover, .back-button:hover {
+    background-color: #ff8f25;
+}
+
+.issue-box {
+    background-color: #f5a623;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.issue-box ul {
+    padding-left: 20px;
+}
+
+.issue-box ul li {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.buttons, .user-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.button, .metric {
+    color: white;
+    background-color: #f5a623;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    width: 30%;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.metric {
+    flex: 1;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#recomendaciones h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#recomendaciones ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#recomendaciones ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+#recomendaciones ul li::before {
+    content: "•";
+    color: #ff8f25;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#recomendaciones h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #333;
+}
+
+#recomendaciones h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #333;
+}
+
+#recomendaciones p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#recomendaciones table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#recomendaciones table, 
+#recomendaciones table th, 
+#recomendaciones table td {
+    border: 1px solid #ddd;
+}
+
+#recomendaciones table th, 
+#recomendaciones table td {
+    padding: 12px;
+    text-align: left;
+}
+
+#recomendaciones table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+#recomendaciones table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#recomendaciones table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-indicator.green {
+    background-color: #4CAF50;
+}
+
+.status-indicator.red {
+    background-color: #f44336;
+}
+
+#analisis .info-box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Asegúrate de que todos los recuadros tengan la misma altura */
+    margin: 20px 0;
+}
+
+#analisis .info-box {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Asegúrate de que el contenido se alinee verticalmente */
+    justify-content: space-between; /* Distribuye el espacio de manera uniforme */
+}
+
+#analisis .info-box p.title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#analisis .info-box .percentage, #analisis .info-box .negative-count {
+    font-size: 3em;
+    color: #ff8f25;
+}
+
+#analisis .info-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#analisis .info-box ul li {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.issue-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Ternium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ternium_Logo.svg/1200px-Ternium_Logo.svg.png" alt="Ternium Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#analisis-limpieza"><i class="fas fa-chart-bar"></i> Análisis y Limpieza</a></li>
+                <li><a href="#dashboard-ml"><i class="fas fa-robot"></i> Dashboard ML</a></li>
+                <li><a href="#dashboard-descriptivo"><i class="fas fa-tachometer-alt"></i> Dashboard Descriptivo</a></li>
+                <li><a href="#recomendaciones"><i class="fas fa-lightbulb"></i> Recomendaciones</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <div id="inicio" class="tab-content active">
+            <h1>Introducción</h1>
+            <p>Ternium, líder en acero, busca:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Identificar las variables que influyen en el rendimiento y consumo de pinturas y analizarlas a través del tiempo.</li>
+                <li><i class="fas fa-check-circle"></i> Identificar patrones que permitan determinar un pronóstico de rendimiento y consumo de pinturas.</li>
+                <li><i class="fas fa-check-circle"></i> Una herramienta predictiva basada en datos históricos para anticipar el consumo futuro de las pinturas en su producción y el rendimiento de estas.</li>
+            </ul>
+            <img src="https://www.ternium.com/media/kcvn1nbw/section6-bg_4.jpg" class="intro-image">
+            <div class="context">
+                <div class="context-item">
+                    <i class="fas fa-cogs"></i>
+                    <p>Se buscó el mejor modelo de Machine Learning.</p>
+                </div>
+                <div class="context-item">
+                    <i class="fas fa-database"></i>
+                    <p>Se realizo una limpia de las bases de datos proporcionadas.</p>
+                </div>
+                <div class="context-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Descubrimos ciertas problemáticas dentro de las bases de datos otorgadas.</p>
+                </div>
+            </div>
+            <div class="next-step">
+                <p>Problemática</p>
+                <a href="#problematica" class="next-button">→</a>
+            </div>
+        </div>
+        <div id="problematica" class="tab-content">
+            <h1>La cuestión crítica</h1>
+            <p>Todo comenzó cuando el rendimiento de las pinturas industriales de Ternium empezó a mostrar inconsistencias preocupantes.</p>
+            <div class="issue-box">
+                <ul>
+                    <li>Quedan pintudas rezagadas</li>
+                    <li>No se sabe la cantidad de pintura consumida exacta</li>
+                    <li>Problema con la calidad de los datos</li>
+                </ul>
+            </div>
+            <h2>Boxplot del Rendimiento</h2>
+            <img src="images/rendimiento_boxplot.png" alt="Boxplot de Rendimiento" class="issue-image">
+            <h2>Boxplot del Rendimiento (Zoom)</h2>
+            <img src="images/rendimiento_boxplot_zoomed_styled.png" alt="Boxplot de Rendimiento (Zoom)" class="issue-image">
+            <div class="issue-info">
+                <p>Datos atípicos en rendimiento</p>
+            </div>
+            <div class="back-step">
+                <a href="#analisis-limpieza" class="back-button">←</a>
+            </div>
+        </div>
+        <div id="analisis-limpieza" class="tab-content">
+            <h1>Análisis y Limpieza de Datos</h1>
+            <p>Bases de datos utilizadas:</p>
+            <ul>
+                <li>Pinturas Revestidos Mx Jul20-Ago23_psch.xlsx
+                    <ul>
+                        <li>Líneas de pintado</li>
+                        <li>Cantidad de litros registrados por día</li>
+                        <li>Valor en dólares</li>
+                        <li>Pinturas</li>
+                    </ul>
+                </li>
+                <li>Producción Ene21-Ago23_xlsx
+                    <ul>
+                        <li>Producción de rollos diaria</li>
+                        <li>Largo de rollo</li>
+                        <li>Ancho de rollo</li>
+                        <li>Usuarios</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="buttons">
+                <a href="#analisis" class="button">Análisis</a>
+                <a href="#limpieza" class="button">Limpieza</a>
+                <a href="#usuarios" class="button">Usuarios</a>
+            </div>
+        </div>
+        <div id="analisis" class="tab-content">
+            <h1>Análisis</h1>
+            <div class="info-box-container">
+                <div class="info-box">
+                    <p class="title">%Porcentaje de información perdida</p>
+                    <span class="percentage">39%</span>
+                </div>
+                <div class="info-box">
+                    <p class="title">Outliers</p>
+                    <ul>
+                        <li>Ctd. total reg. 312</li>
+                        <li>Valor var. 254</li>
+                        <li>Metros cuadrados reales por rollo 351</li>
+                        <li>Rendimiento Litros/M2 148</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <p class="title">Número de registros negativos</p>
+                    <span class="negative-count">138</span>
+                </div>
+            </div>
+            <img src="images/histogramas.png" alt="Boxplot de Rendimiento" class="issue-image">
+            <div class="back-step">
+                <a href="#analisis-limpieza" class="back-button">←</a>
+            </div>
+        </div>        
+        <div id="limpieza" class="tab-content">
+            <h1>Proceso de Limpieza de Datos</h1>
+            <p>Pinturas con presencia en todos los meses:</p>
+            <ul>
+                <li>0601-VERDE PRIMSA</li>
+                <li>0028-CLEAR P/ESPUMA</li>
+                <li>0400-GRIS FONDO</li>
+                <li>0023-CLEAR EPOXICO P/ESPUMA</li>
+                <li>0021-UNIVERSAL PRIMER</li>
+                <li>0102-BLANCO STD</li>
+                <li>0079-BECKRYPRIM 246</li>
+                <li>0038-PRIMER 917</li>
+                <li>0404-GRIS FONDO MC</li>
+                <li>0435-APOLLO GRAY KRYSTAL KOTE</li>
+                <li>0104-BLANCO SUPERMATIC</li>
+            </ul>
+            <p>Imputación:</p>
+            <div class="images">
+                <img src="images/histograma1.png" alt="Histograma de Ctd total reg." class="issue-image">
+                <img src="images/histograma2.png" alt="Histograma de Ctd total reg. (2)" class="issue-image">
+            </div>
+            <div class="back-step">
+                <a href="#analisis-limpieza" class="back-button">←</a>
+            </div>
+        </div>
+        <div id="usuarios" class="tab-content">
+            <h1>Usuarios</h1>
+            <div class="user-metrics">
+                <a href="#" class="metric">Metros cuadrados</a>
+                <a href="#" class="metric">Tiempo en horas</a>
+                <a href="#" class="metric">Metros pintados por hora</a>
+            </div>
+            <img src="images/histograma_metros_por_hora.png" alt="Histograma de Metros por Hora" class="issue-image">
+            <div class="back-step">
+                <a href="#analisis-limpieza" class="back-button">←</a>
+            </div>
+        </div>
+        <div id="dashboard-ml" class="tab-content">
+            <h1>Dashboard ML</h1>
+            <p>Tablero para el modelo ML.</p>
+            <a href="https://modelo-wqcdnebnqikdvxk49zsubm.streamlit.app/" target="_blank" class="next-button">Abrir Tablero</a>
+        </div>
+        <div id="dashboard-descriptivo" class="tab-content">
+            <h1>Dashboard Descriptivo</h1>
+            <p>Tablero descriptivo embebido desde Streamlit.</p>
+            <a href="https://tablero-odifar28qyc6qrabnb6fgw.streamlit.app/" target="_blank" class="next-button">Abrir Tablero</a>
+        </div>
+        <div id="recomendaciones" class="tab-content">
+            <h1>Recomendaciones y Conclusiones</h1>
+            <ul>
+                <li>Automatización de notificaciones en Power Bi</li>
+                <li>Tabla de alertas</li>
+                <li>Indicadores de Estado</li>
+            </ul>
+            <h2>Ejemplo de Alertas Configuradas en Power BI:</h2>
+            <h3>Alerta de Registro Faltante:</h3>
+            <p>
+                <strong>Condición:</strong> Si [Ctd. total. reg] es 0.<br>
+                <strong>Acción:</strong> Enviar un correo electrónico al gerente de producción.<br>
+                <strong>Frecuencia:</strong> Inmediatamente al detectar el problema.
+            </p>
+            <h3>Alerta de Alta Variabilidad:</h3>
+            <p>
+                <strong>Condición:</strong> Si [Valor Var.] excede un umbral definido.<br>
+                <strong>Acción:</strong> Enviar un correo electrónico al equipo de calidad.<br>
+                <strong>Frecuencia:</strong> Una vez al día si la condición se cumple.
+            </p>
+            <h3>Tabla de Estado de Producción</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Línea de Producción</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Línea 1</td>
+                        <td><span class="status-indicator green"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Línea 2</td>
+                        <td><span class="status-indicator green"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Problema</th>
+                        <th>Estado</th>
+                        <th>Responsable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-Jun</td>
+                        <td>No se registraron datos en la Línea 4</td>
+                        <td>Pendiente</td>
+                        <td>Juan Pérez</td>
+                    </tr>
+                    <tr>
+                        <td>02-Jun</td>
+                        <td>Alta variabilidad en Línea 3</td>
+                        <td>En proceso</td>
+                        <td>María García</td>
+                    </tr>
+                    <tr>
+                        <td>03-Jun</td>
+                        <td>Datos incompletos en Línea 2</td>
+                        <td>Resuelto</td>
+                        <td>Luis Fernández</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
